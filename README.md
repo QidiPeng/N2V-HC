@@ -24,6 +24,9 @@
 'result'                     Converged result files, the file name can be specified by the user. From left to right, are module label, module nodes size, module edges size, disease1_SNP__count, disease1_eGene_count, disease1_SNP, disease1_eGene, ..., other gene.
 ```
 
+## Environment
+Use pathon2 and R3.5.3.
+
 ## Example
 ```
 ## Hierarchical Clustering
