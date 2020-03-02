@@ -6,17 +6,17 @@
 
 ## Input
 '''
-'diseaseSNP'    : The relationship between disease and SNP, from left to right is proxy SNP, independent SNP, and disease.
-'eqtl.edgelist'   : eQTL network, one eQTL information per line, gene and SNP from left to right.
-'gene.edgelist' : Human intercome network, two vertices per line, representing one edge.
+  'diseaseSNP'    : The relationship between disease and SNP, from left to right is proxy SNP, independent SNP, and disease.
+  'eqtl.edgelist' : eQTL network, one eQTL information per line, gene and SNP from left to right.
+  'gene.edgelist' : Human intercome network, two vertices per line, representing one edge.
 '''
 
 ## Output
 '''
-'eGene.nodeID2name' : eGene and its nodeID mapping file, intermediate file.
-'eqtl.edgelist.indeSNP' : Each line from left to right is gene and SNP, which represents an eQTL information after converted proxy SNP into its corresponding independent SNP.
-'eqtl.nodeID2name' : Gene and SNP nodes and their nodeID in the 'eqtl.edgelist.indeSNP' file.
-'network.edgelist.nodeName' : The integrated network, with two nodes(node name) per row, represents one edge.
+  'eGene.nodeID2name' : eGene and its nodeID mapping file, intermediate file.
+  'eqtl.edgelist.indeSNP' : Each line from left to right is gene and SNP, which represents an eQTL information after converted proxy SNP into its corresponding independent SNP.
+  'eqtl.nodeID2name' : Gene and SNP nodes and their nodeID in the 'eqtl.edgelist.indeSNP' file.
+  'network.edgelist.nodeName' : The integrated network, with two nodes(node name) per row, represents one edge.
 'network.nodeID2name' : The mapping of node name to node ID in the 'network.edgelist.nodeName'.
 'network.emb' : Node2vec result file, the file name can be specified by the user.
 'network.edgelist.nodeID' : The integrated network, with two nodes(node ID in 'network.nodeID2name' )per row, represents one edge.
