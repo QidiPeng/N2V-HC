@@ -34,7 +34,7 @@ bash run.sh
 ```
 
 ## Contact
-If you need help, please contact *ydwang at hit dot edu dot cn*, *jiajiepeng at nwpu at edu at cn* or *1571608336 at qq at com*.
+If you need help, please contact *ydwang@hit.edu.cn*, *jiajiepeng@nwpu.edu.cn* or *1571608336@qq.com*.
 
 ## Full paper
-Full paper has been submitted to **Frontiers in Genetics**
+Full paper has been submitted to **Frontiers in Genetics**.
