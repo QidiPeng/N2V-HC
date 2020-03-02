@@ -27,14 +27,14 @@
 ## Example
 ```
 ## Hierarchical Clustering
-Rscript src/HierarchicalClustering.R -e network.emb -g network.edgelist.nodeID -o network.pred_label -s 20 -r 2
+Rscript src/HierarchicalClustering.R -e football/embedding -g football/edgelist -o football/pred_label -s 20 -r 2
 
 ## execution script
 bash run.sh
 ```
 
 ## Contact
-
+If you need help, please contact *ydwang at hit dot edu dot cn*, *jiajiepeng at nwpu at edu at cn* or *1571608336 at qq at com*.
 
 ## Full paper
-
+Full paper has been submitted to **Frontiers in Genetics**
