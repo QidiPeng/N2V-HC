@@ -1,23 +1,17 @@
-
-
-'''
-## 描述：将(proxy SNP, eGene)转化到(independent SNP, eGene)；融合eQTL network和gene network；为每个节点赋予一个node_id及label.
-## Description: Fusion eQTL network and gene network and convert it to nodeID (node2vec input format).
-## Input: 
-## Output: 
-## Note: Some intermediate files, such as nodeID2name, will be generated, which will be used for subsequent operations.
-'''
+# -*- coding: utf-8 -*-
 
 import argparse
 import pandas as pd
 import networkx as nx
 
+
 def parse_args():
-	parser = argparse.ArgumentParser(description="数据预处理")
-	parser.add_argument('--input', nargs='?', default='example_data/', help='原始数据路径')
-	parser.add_argument('--output', nargs='?', default='example_data/pre-processing/', help='结果路径')
+	parser = argparse.ArgumentParser(description="pre-processing")
+	parser.add_argument('--input', nargs='?', default='example_data/', help='Original data dir')
+	parser.add_argument('--output', nargs='?', default='example_data/pre-processing/', help='Output dir')
 	return parser.parse_args()
 ##END
+
 
 ##Reading parameters.
 args = parse_args()
@@ -32,7 +26,7 @@ eqtl_edgelist = eqtl_edgelist[['node_x', 'indeSNP']]
 eqtl_edgelist.columns = ['node_x', 'node_y']
 eqtl_edgelist.drop_duplicates(inplace=True)
 eqtl_edgelist.to_csv(args.output+'eqtl.edgelist.indeSNP', sep='\t', header=False, index=False)
-print('independent eqtl edgelist legnth:', eqtl_edgelist.shape[0])
+print 'independent eqtl edgelist legnth:', eqtl_edgelist.shape[0]
 
 
 ## 2. merge eQTL network and gene network
@@ -43,7 +37,7 @@ for line in fp:
 	line = line.strip('\n').split('\t')
 	gene_edgelist.append(line)
 fp.close()
-print('genelist length:', len(gene_edgelist))
+print 'genelist length:', len(gene_edgelist)
 
 ## read eQTL network
 eqtl_edgelist = []
@@ -52,13 +46,13 @@ for line in fp:
 	line = line.strip('\n').split('\t')
 	eqtl_edgelist.append(line)
 fp.close()
-print('eqtllist length:', len(eqtl_edgelist))
+print 'eqtllist length:', len(eqtl_edgelist)
 
 ## merge network
 gg.clear()
 gg.add_edges_from(gene_edgelist)
 gg.add_edges_from(eqtl_edgelist)
-print('network has %d nodes and %d edges'%(len(gg.nodes()), len(gg.edges())))
+print 'network has %d nodes and %d edges'%(len(gg.nodes()), len(gg.edges())) 
 network_edgelist = pd.DataFrame(gg.edges(), columns=['node_x', 'node_y'])
 network_edgelist.to_csv(args.output+'network.edgelist.nodeName', sep='\t', header=False, index=False)
 
@@ -83,19 +77,10 @@ pred_label.to_csv(args.output+'network.pred_label', sep='\t', header=False, inde
 
 
 ## 6. save eqtl node by node_id and node_name
-'''
-eqtl_edgelist = pd.DataFrame(eqtl_edgelist, columns=['node_x', 'node_y'])
-eqtl_nodelist = list(set(eqtl_edgelist['node_x']) | set(eqtl_edgelist['node_y']))
-eqtl_nodelist = pd.DataFrame(eqtl_nodelist, columns=['node_name'])
-eqtl_nodelist = nodeID2name.merge(eqtl_nodelist, left_on='node_name', right_on='node_name')
-eqtl_nodelist.to_csv(args.output+"eqtl.nodeID2name", sep='\t', header=False, index=False)
-print('eqtl_nodelist.shape:', eqtl_nodelist.shape)
-'''
 eqtl_edgelist = pd.DataFrame(eqtl_edgelist, columns=['node_x', 'node_y'])
 eGene = list(set(eqtl_edgelist['node_x']))
 eGene = pd.DataFrame(eGene, columns=['node_name'])
 eGene = eGene.merge(nodeID2name, left_on='node_name', right_on='node_name')
 eGene.to_csv(args.output+'eGene.nodeID2name', sep='\t', header=False, index=False)
-print('eGene.shape:', eGene.shape)
-
+print 'eGene.shape:', eGene.shape
 
