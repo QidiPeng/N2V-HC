@@ -27,7 +27,7 @@ N2V-HC implement a disease module identification method based on deep representa
 ## Example
 ```
 ## Hierarchical Clustering
-Rscript src/HierarchicalClustering.R -e football/embedding -g football/edgelist -o football/pred_label -s 20 -r 2
+Rscript src/HierarchicalClustering.R -e football/embedding -g football/edgelist -o football/pred_label -s 5 -r 2
 
 ## execution script
 bash run.sh
