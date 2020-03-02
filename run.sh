@@ -7,7 +7,7 @@
 
 
 iteration=10 #maximum iterations
-dir="example-network/" #data storage directory
+dir="PD-network/" #data storage directory
 
 echo "pre-process network data"
 pre_dir=$dir"network/"
