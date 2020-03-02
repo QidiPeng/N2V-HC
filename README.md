@@ -25,7 +25,13 @@
 ```
 
 ## Example
+```
+## Hierarchical Clustering
+Rscript src/HierarchicalClustering.R -e network.emb -g network.edgelist.nodeID -o network.pred_label -s 20 -r 2
 
+## execution script
+bash run.sh
+```
 
 ## Contact
 
