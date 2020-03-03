@@ -10,6 +10,7 @@
 'eqtl.edgelist'  eQTL network, one eQTL information per line, gene and SNP from left to right.
 'gene.edgelist'  Human intercome network, two vertices per line, representing one edge.
 ```
+![image][https://github.com/QidiPeng/N2V-HC/blob/master/Figure-dolphins_case.eps]
 
 ## Output
 ```
