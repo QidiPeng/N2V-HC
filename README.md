@@ -28,17 +28,17 @@
     python2
     R 3.5.3
 
-## Example
+## Demo
 ```
 ## Hierarchical Clustering
-Rscript src/HierarchicalClustering.R -e football/embedding -g football/edgelist -o football/pred_label -s 5 -r 2
+Rscript src/HierarchicalClustering.R -e dolphins/embedding -g dolphins/edgelist -o dolphins/pred_label -s 10 -r 2
 
 ## execution script
 bash run.sh
 ```
 
 ## Contact
-If you need help, please contact *ydwang@hit.edu.cn*, *jiajiepeng@nwpu.edu.cn* or *1571608336@qq.com*.
+If you need help, please contact *wangtao.shandong@gmail.com* or *1571608336@qq.com*.
 
 ## Full paper
 Full paper has been submitted to **Frontiers in Genetics**.
