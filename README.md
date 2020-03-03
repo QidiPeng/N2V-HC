@@ -11,6 +11,8 @@
 'gene.edgelist'  Human intercome network, two vertices per line, representing one edge.
 ```
 ![image][https://github.com/QidiPeng/N2V-HC/blob/master/Figure-dolphins_case.eps]
+![image][https://github.com/QidiPeng/N2V-HC/blob/master/Figure-dolphins_case-eps-converted-to.pdf]
+![image][https://github.com/QidiPeng/N2V-HC/blob/master/Figure-dolphins-case.JPG]
 
 ## Output
 ```
