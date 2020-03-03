@@ -37,7 +37,11 @@ Rscript src/HierarchicalClustering.R -e dolphins/embedding -g dolphins/edgelist 
 bash run.sh
 ```
 ![image](https://github.com/QidiPeng/N2V-HC/blob/master/Figure-dolphins-case.JPG)
-
+Figure-1. The clustering effect of N2V-HC on Dolphins social network (Lusseau et al., 2003). (A) The
+topology of original network, with colors represents the ground truth communities. (B) The hierarchical
+clustering dendrogram constructed by N2V-HC, where each leaf node represents a member in original
+network. two prediced modules are colored in red and blue. Node ’40’, which is misclassified, is labeled in
+yellow.
 
 ## Contact
 If you need help, please contact *wangtao.shandong@gmail.com* or *1571608336@qq.com*.
