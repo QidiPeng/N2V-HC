@@ -30,14 +30,13 @@
 
 ## Demo
 ```
-## Hierarchical Clustering
+## Hierarchical Clustering in Dolphins social network
 Rscript src/HierarchicalClustering.R -e dolphins/embedding -g dolphins/edgelist -o dolphins/pred_label -s 10 -r 2
 
 ## execution script
 bash run.sh
 ```
 ![image](https://github.com/QidiPeng/N2V-HC/blob/master/Figure-dolphins-case.JPG)
-
 Figure-1. The clustering effect of N2V-HC on Dolphins social network (Lusseau et al., 2003). (A) The
 topology of original network, with colors represents the ground truth communities. (B) The hierarchical
 clustering dendrogram constructed by N2V-HC, where each leaf node represents a member in original
