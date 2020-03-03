@@ -11,8 +11,6 @@
 'gene.edgelist'  Human intercome network, two vertices per line, representing one edge.
 ```
 
-![image](https://github.com/QidiPeng/N2V-HC/blob/master/Figure-dolphins-case.JPG)
-
 ## Output
 ```
 'eGene.nodeID2name'          eGene and its nodeID mapping file.
@@ -38,6 +36,8 @@ Rscript src/HierarchicalClustering.R -e dolphins/embedding -g dolphins/edgelist 
 ## execution script
 bash run.sh
 ```
+![image](https://github.com/QidiPeng/N2V-HC/blob/master/Figure-dolphins-case.JPG)
+
 
 ## Contact
 If you need help, please contact *wangtao.shandong@gmail.com* or *1571608336@qq.com*.
