@@ -2,7 +2,7 @@
 **N2V-HC**: A novel method for disease module identification based on deep representation learning of multi-layer biological networks.
 
 ## Introduction
-`N2V-HC` implement a disease module identification method based on deep representation learning of multi-layer biological networks. This method first generates an integrated network based on human interactome and summary data of Genome-wide Association Studies (GWAS), expression Quantitative Trait Loci (eQTL) studies. The features of nodes in the network are then extracted by deep representation learning. Hierarchical clustering with dynamic tree cut methods are applied to discover the modules containing disease related genes which are regulated by GWAS variants, and the module containing eGene is extracted as a new network, iteratively.
+`N2V-HC` implement a disease module identification method based on deep representation learning of multi-layer biological networks. This method first generates an integrated network based on human interactome and summary data of Genome-wide Association Studies (GWAS), expression Quantitative Trait Loci (eQTL) studies. The features of nodes in the network are then extracted by deep representation learning. Hierarchical clustering with dynamic tree cut methods are applied to discover the modules containing disease related genes which are regulated by GWAS variants, and the module containing eGene is extracted as a sub-ntwork to use Hierarchical clustering, iteratively, until the number of nodes in the network no longer changes.
 
 ## Input
 ```
