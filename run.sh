@@ -1,4 +1,3 @@
-#!bin/bash
 
 # All input files are separated by '\t', except the result file of node2vec is separated by ' '.
 # diseaseSNP file     : [proxySNP, indeSNP, disease]
@@ -7,13 +6,15 @@
 
 
 iteration=10 #maximum iterations
-dir="PD-network/" #data storage directory
+dir="AD-Brain-network/" #data storage directory
 
 echo "pre-process network data"
 pre_dir=$dir"network/"
 mkdir $pre_dir
 # Tag proxy SNPs to independent SNPs and merge network.
 python src/pre-process.py --input $dir --output $pre_dir
+
+echo "begin learning representation"
 # Learning node features using node2vec.
 python node2vec-master/src/main.py --input $pre_dir"network.edgelist.nodeID" --output $pre_dir"network.emb"
 sed -i '1d' $pre_dir"network.emb"
@@ -37,10 +38,12 @@ python src/extract-subgraph.py --network $pre_dir --input $old_dir --output $new
 # determine if the convergence condition is reached: the number of nodes in the network is no longer changes.
 echo -e "\njudge constriction"
 if python src/judge-stop.py --g1 $old_dir"network.edgelist.nodeID" --g2 $new_dir"network.edgelist.nodeID"; then
-	echo "constriction in ${i}th iteration."
-	exit 0
+	if [ $i != 1 ] ; then
+		echo "constriction in ${i}th iteration."
+		exit 0
+	fi
 else
-	echo "continue iteration..."
+	echo "continue iteration ..."
 fi
 ##还需要修改，添加迭代次数不等于1
 
