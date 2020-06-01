@@ -47,4 +47,4 @@ yellow.
 If you need help, please contact *wangtao.shandong@gmail.com* or *1571608336@qq.com*.
 
 ## Full paper
-Full paper has been submitted to **Frontiers in Genetics**.
+Wang, Tao, Qidi Peng, Bo Liu, Yongzhuang Liu, and Yadong Wang. "Disease Module Identification Based on Representation Learning of Complex Networks Integrated From GWAS, eQTL Summaries, and Human Interactome." Frontiers in Bioengineering and Biotechnology 8 (2020).
